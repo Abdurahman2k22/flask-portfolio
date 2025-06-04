@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarrar's portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Zarrar</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h2>Get In Touch</h2>
+            <p>If you'd like to connect, collaborate, or just say hello—feel free to reach out!</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> Abdulrahmanama@gmail.com</p>
+                <p><strong>Phone:</strong> +234 810 515 6707</p>
+                <p><strong>Instagram:</strong> <a href="http://instagram.com/ibn_auwal_007?igsh=YzljYTk1ODg3Zg=="
+                        target="_blank" rel="noopener noreferrer">@Ibn_Auwal_II</a></p>
+            </div>
+
+            <div class="message-box">
+                <form action="{{ url_for('send_message') }}" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Zarrar | All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/abdulrahman-auwal-5aa063282">LinkedIn</a>
+                <a href="https://github.com/Abdurahman2k22">GitHub</a>
+                <a href="https://x.com/Zarrar7992673?t=Xw-qmYL23drka2OOLruevw&s=09">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

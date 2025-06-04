@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(images/swe.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002b36;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6, green, blue, alpha);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.about-text {
+  flex: 1;
+
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.projects {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+  border-left: 5px solid #007BFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0.6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #007BFF;
+}
+
+.project-card p {
+  margin-top: 8px;
+  color: #444;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* CONTACT PAGE */
+
+.contact {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.message-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.message-box input,
+.message-box textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.message-box button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-box button:hover {
+  background-color: #0056b3;
+}
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.home-hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 700px;
+}
+
+.home-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #00aaff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: backround-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0077cc;
+}
+
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-content .social-links a {
+  color: #00aaff;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content .social-links a:hover {
+  color: #0077cc;
+}
+
+
+
+/* Navbar animation styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  animation: slideDown 1.2s ease-out;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* optional background */
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  animation: fadeZoom 1.5s ease-in-out;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00f7ff;
+  transition: width 0.4s ease;
+}
+
+.nav-links li a:hover {
+  color: #00f7ff;
+  transform: scale(1.05);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeZoom {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.flash-messages {
+  margin: 1rem 0;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
